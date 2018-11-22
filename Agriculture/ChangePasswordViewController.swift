@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  ChangePasswordViewController.swift
 //  Agriculture
 //
 //  Created by Bimalesh Sahoo on 22/11/18.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class ChangePasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSlideMenuButton()
+
         // Do any additional setup after loading the view.
     }
     

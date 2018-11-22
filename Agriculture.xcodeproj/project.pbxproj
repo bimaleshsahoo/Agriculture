@@ -14,6 +14,10 @@
 		34B61E0921A5A57500440200 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61E0821A5A57500440200 /* LoginViewController.swift */; };
 		34B61E0B21A5D08700440200 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61E0A21A5D08700440200 /* ForgotPasswordViewController.swift */; };
 		34B61E0D21A60E5300440200 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61E0C21A60E5300440200 /* HomeViewController.swift */; };
+		34B61E0F21A6903C00440200 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61E0E21A6903C00440200 /* ChangePasswordViewController.swift */; };
+		34B61E3C21A6D96100440200 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61E3B21A6D96100440200 /* BaseViewController.swift */; };
+		34B61E3E21A6D9A200440200 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61E3D21A6D9A200440200 /* MenuViewController.swift */; };
+		34B61E4021A6E22400440200 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61E3F21A6E22400440200 /* NextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		34B61E0821A5A57500440200 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		34B61E0A21A5D08700440200 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		34B61E0C21A60E5300440200 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		34B61E0E21A6903C00440200 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		34B61E3B21A6D96100440200 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		34B61E3D21A6D9A200440200 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		34B61E3F21A6E22400440200 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +68,12 @@
 			children = (
 				34B61DF621A597B500440200 /* AppDelegate.swift */,
 				34B61E0821A5A57500440200 /* LoginViewController.swift */,
+				34B61E0E21A6903C00440200 /* ChangePasswordViewController.swift */,
 				34B61E0A21A5D08700440200 /* ForgotPasswordViewController.swift */,
 				34B61E0C21A60E5300440200 /* HomeViewController.swift */,
+				34B61E3F21A6E22400440200 /* NextViewController.swift */,
+				34B61E3B21A6D96100440200 /* BaseViewController.swift */,
+				34B61E3D21A6D9A200440200 /* MenuViewController.swift */,
 				34B61DFA21A597B600440200 /* Main.storyboard */,
 				34B61DFD21A597B800440200 /* Assets.xcassets */,
 				34B61DFF21A597B800440200 /* LaunchScreen.storyboard */,
@@ -142,9 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				34B61E0921A5A57500440200 /* LoginViewController.swift in Sources */,
+				34B61E4021A6E22400440200 /* NextViewController.swift in Sources */,
 				34B61DF721A597B500440200 /* AppDelegate.swift in Sources */,
 				34B61E0B21A5D08700440200 /* ForgotPasswordViewController.swift in Sources */,
+				34B61E3E21A6D9A200440200 /* MenuViewController.swift in Sources */,
+				34B61E0F21A6903C00440200 /* ChangePasswordViewController.swift in Sources */,
 				34B61E0D21A60E5300440200 /* HomeViewController.swift in Sources */,
+				34B61E3C21A6D96100440200 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K6YREPMMF6;
 				INFOPLIST_FILE = Agriculture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K6YREPMMF6;
 				INFOPLIST_FILE = Agriculture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

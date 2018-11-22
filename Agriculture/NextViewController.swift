@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  NextViewController.swift
 //  Agriculture
 //
 //  Created by Bimalesh Sahoo on 22/11/18.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class NextViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
+
         // Do any additional setup after loading the view.
     }
     
