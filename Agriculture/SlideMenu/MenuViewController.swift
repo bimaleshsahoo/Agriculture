@@ -19,11 +19,16 @@ class MenuViewController: UIViewController {
 
     @IBOutlet weak var btnCloseMenuOverlay: UIButton!
     
+    @IBOutlet weak var profileImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        profileImage.layer.cornerRadius = profileImage.frame.height / 2
+        profileImage.layer.masksToBounds = true
+        
     }
     
     @IBAction func btn1(_ sender: Any) {

@@ -47,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		344ABE6421A7DEBA004703F8 /* SlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				34B61E3B21A6D96100440200 /* BaseViewController.swift */,
+				34B61E3D21A6D9A200440200 /* MenuViewController.swift */,
+			);
+			path = SlideMenu;
+			sourceTree = "<group>";
+		};
 		34B61DEA21A597B500440200 = {
 			isa = PBXGroup;
 			children = (
@@ -72,8 +81,7 @@
 				34B61E0A21A5D08700440200 /* ForgotPasswordViewController.swift */,
 				34B61E0C21A60E5300440200 /* HomeViewController.swift */,
 				34B61E3F21A6E22400440200 /* NextViewController.swift */,
-				34B61E3B21A6D96100440200 /* BaseViewController.swift */,
-				34B61E3D21A6D9A200440200 /* MenuViewController.swift */,
+				344ABE6421A7DEBA004703F8 /* SlideMenu */,
 				34B61DFA21A597B600440200 /* Main.storyboard */,
 				34B61DFD21A597B800440200 /* Assets.xcassets */,
 				34B61DFF21A597B800440200 /* LaunchScreen.storyboard */,

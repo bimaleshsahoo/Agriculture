@@ -15,8 +15,6 @@ class ForgotPasswordViewController: UIViewController {
     @IBOutlet weak var usernameBoxView: UIView!
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var mobileTextfield: UITextField!
-    @IBOutlet weak var btnSendOtp: UIButton!
-    @IBOutlet weak var otpTextfield: UITextField!
     
     @IBOutlet weak var passwordBoxView: UIView!
     @IBOutlet weak var usernameTextfield: UITextField!
@@ -27,12 +25,14 @@ class ForgotPasswordViewController: UIViewController {
     @IBOutlet weak var lblQuestion: UILabel!
     @IBOutlet weak var answerTextfield: UITextField!
     
+    @IBOutlet weak var otpBoxView: UIView!
+    @IBOutlet weak var otpTextfield: UITextField!
+    @IBOutlet weak var btnSendOtp: UIButton!
+    
     @IBOutlet weak var btnSubmit: UIButton!
     
     @IBOutlet weak var usernamePasswordToggle: UISegmentedControl!
-    
-    @IBOutlet weak var backTapped: UIView!
-    
+    @IBOutlet weak var otpToggle: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,7 @@ class ForgotPasswordViewController: UIViewController {
         inputField()
         forgotPasswordBox()
         questionBox()
+        otpBox()
         
         btnSubmit.layer.cornerRadius = 6.0
         btnSubmit.layer.masksToBounds = false
@@ -59,16 +60,27 @@ class ForgotPasswordViewController: UIViewController {
         
         usernamePasswordToggle.layer.cornerRadius = 5.0
         usernamePasswordToggle.layer.masksToBounds = true
+        
+        otpToggle.layer.cornerRadius = 5.0
+        otpToggle.layer.masksToBounds = true
 
     }
     
-    func questionBox(){
+    func questionBox() {
         
         questionBoxView.layer.cornerRadius = 6.0
         questionBoxView.layer.masksToBounds = true
         questionBoxView.layer.borderWidth = 1.0
         questionBoxView.layer.borderColor = UIColor.white.cgColor
         
+    }
+    
+    func otpBox() {
+        
+        otpBoxView.layer.cornerRadius = 6.0
+        otpBoxView.layer.masksToBounds = true
+        otpBoxView.layer.borderWidth = 1.0
+        otpBoxView.layer.borderColor = UIColor.white.cgColor
     }
     
     func inputField() {
@@ -87,6 +99,23 @@ class ForgotPasswordViewController: UIViewController {
                                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
         answerTextfield.attributedPlaceholder = NSAttributedString(string: "Answer",
                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        
+    }
+    
+    func toggleOtp() {
+        
+        switch otpToggle.selectedSegmentIndex {
+        case 0:
+            otpBoxView.isHidden = false
+            questionBoxView.isHidden = true
+         
+        case 1:
+            otpBoxView.isHidden = true
+            questionBoxView.isHidden = false
+
+        default:
+          break
+        }
         
     }
     
@@ -130,5 +159,10 @@ class ForgotPasswordViewController: UIViewController {
     @IBAction func submitTapped(_ sender: Any) {
         
     }
+    
+    @IBAction func otpToggleTapped(_ sender: Any) {
+        toggleOtp()
+    }
+    
     
 }
