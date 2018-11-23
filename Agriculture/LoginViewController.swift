@@ -30,6 +30,9 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var dropdownLanguageView: UIView!
     @IBOutlet weak var lblDropdownLanguage: UILabel!
+    @IBOutlet weak var btnDropDown: UIButton!
+    
+    let dropDown = DropDown()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,47 +65,54 @@ class LoginViewController: UIViewController {
         sendOtpBtn.layer.shadowPath = UIBezierPath(roundedRect:sendOtpBtn.bounds, cornerRadius:sendOtpBtn.layer.cornerRadius).cgPath
         
         inputText()
-
-        languageSelect()
-        
+        lblDropdownLanguage?.text = "English"
+        dropDownSetup()
     }
     
     // MARK: - LANGUAGE DROPDOWN
-    func languageSelect() {
-        let defaultLanguage = UITapGestureRecognizer(target: self, action: #selector(defaultSelection))
-            defaultLanguageView.addGestureRecognizer(defaultLanguage)
+    
+    func dropDownSetup() {
         
-        let dropdownLanguage = UITapGestureRecognizer(target: self, action: #selector(dropdownSelection))
-        dropdownLanguageView.addGestureRecognizer(dropdownLanguage)
+        var languageDataSource = ["",""]
+        let pListFileURL = Bundle.main.url(forResource: "Languages", withExtension: "plist", subdirectory: "")
+        if let pListPath = pListFileURL?.path, let pListData = FileManager.default.contents(atPath: pListPath) {
+                do {
+                    let pListObject = try PropertyListSerialization.propertyList(from: pListData, options:PropertyListSerialization.ReadOptions(), format:nil)
+ 
+                    guard let pListArray = pListObject as? [String] else {
+                        return
+                    }
+                    
+                    languageDataSource = pListArray
+                } catch {
+                    print("Error reading regions plist file: \(error)")
+                    return
+                }
+        }
         
+        dropDown.dataSource = languageDataSource as [AnyObject]
+        dropDown.width = self.lblDefaultLanguage.frame.width
+        dropDown.anchorView = self.lblDefaultLanguage
+        dropDown.bottomOffset = CGPoint(x: 0, y:self.lblDefaultLanguage.bounds.height)
+        
+        self.dropDown.selectionAction = { [unowned self] (index, item) in
+            self.dropDown.deselectRowAtIndexPath(index)
+            self.lblDefaultLanguage.text = item
+        }
+            
     }
     
-    @objc func defaultSelection() {
-        if dropdownLanguageView.isHidden == true {
-            dropdownLanguageView.isHidden = false
-        } else {
-            dropdownLanguageView.isHidden = true
+    @IBAction func btnLanguageDropDown(_ sender: Any) {
+    
+        if dropDown.isHidden{
+            dropDown.show()
         }
-        
-        if lblDefaultLanguage.text == "Hindi" {
-            lblDropdownLanguage.text = "English"
-        } else {
-            lblDropdownLanguage.text = "Hindi"
+        else
+        {
+            dropDown.hide()
         }
     }
-    
-    @objc func dropdownSelection() {
-        
-        
-        if dropdownLanguageView.isHidden == true {
-            dropdownLanguageView.isHidden = false
-        } else {
-            dropdownLanguageView.isHidden = true
-        }
-        
-        lblDefaultLanguage.text = lblDropdownLanguage.text
 
-    }
     
     // MARK: - FUNCTION DEFINATIONS
     
