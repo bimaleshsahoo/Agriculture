@@ -25,6 +25,7 @@
 		4310805821A8227F005B1D6E /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310805221A8227F005B1D6E /* DropDown.swift */; };
 		4310805921A8227F005B1D6E /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310805321A8227F005B1D6E /* DPDUIView+Extension.swift */; };
 		4310805D21A82984005B1D6E /* Languages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4310805C21A82984005B1D6E /* Languages.plist */; };
+		4310806021A9352C005B1D6E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310805F21A9352C005B1D6E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		4310805221A8227F005B1D6E /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		4310805321A8227F005B1D6E /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DPDUIView+Extension.swift"; sourceTree = "<group>"; };
 		4310805C21A82984005B1D6E /* Languages.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Languages.plist; sourceTree = "<group>"; };
+		4310805F21A9352C005B1D6E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +75,6 @@
 		34B61DEA21A597B500440200 = {
 			isa = PBXGroup;
 			children = (
-				4310805C21A82984005B1D6E /* Languages.plist */,
-				4310804D21A82270005B1D6E /* DropDown */,
 				34B61DF521A597B500440200 /* Agriculture */,
 				34B61DF421A597B500440200 /* Products */,
 			);
@@ -93,11 +93,14 @@
 			children = (
 				34B61DF621A597B500440200 /* AppDelegate.swift */,
 				34B61E0821A5A57500440200 /* LoginViewController.swift */,
+				4310805F21A9352C005B1D6E /* Constants.swift */,
 				34B61E0E21A6903C00440200 /* ChangePasswordViewController.swift */,
 				34B61E0A21A5D08700440200 /* ForgotPasswordViewController.swift */,
 				34B61E0C21A60E5300440200 /* HomeViewController.swift */,
 				34B61E3F21A6E22400440200 /* NextViewController.swift */,
 				344ABE6421A7DEBA004703F8 /* SlideMenu */,
+				4310804D21A82270005B1D6E /* DropDown */,
+				4310805E21A84241005B1D6E /* Plist files */,
 				34B61DFA21A597B600440200 /* Main.storyboard */,
 				34B61DFD21A597B800440200 /* Assets.xcassets */,
 				34B61DFF21A597B800440200 /* LaunchScreen.storyboard */,
@@ -117,6 +120,14 @@
 				4310804E21A8227F005B1D6E /* DropDownCell.xib */,
 			);
 			path = DropDown;
+			sourceTree = "<group>";
+		};
+		4310805E21A84241005B1D6E /* Plist files */ = {
+			isa = PBXGroup;
+			children = (
+				4310805C21A82984005B1D6E /* Languages.plist */,
+			);
+			path = "Plist files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 				34B61E3E21A6D9A200440200 /* MenuViewController.swift in Sources */,
 				34B61E0F21A6903C00440200 /* ChangePasswordViewController.swift in Sources */,
 				4310805521A8227F005B1D6E /* DPDConstants.swift in Sources */,
+				4310806021A9352C005B1D6E /* Constants.swift in Sources */,
 				34B61E0D21A60E5300440200 /* HomeViewController.swift in Sources */,
 				34B61E3C21A6D96100440200 /* BaseViewController.swift in Sources */,
 			);

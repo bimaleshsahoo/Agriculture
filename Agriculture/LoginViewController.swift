@@ -28,16 +28,19 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var defaultLanguageView: UIView!
     @IBOutlet weak var lblDefaultLanguage: UILabel!
     
-    @IBOutlet weak var dropdownLanguageView: UIView!
-    @IBOutlet weak var lblDropdownLanguage: UILabel!
     @IBOutlet weak var btnDropDown: UIButton!
+    
+    @IBOutlet weak var constrainLoginViewTrailing: NSLayoutConstraint!
+    @IBOutlet weak var constrainLoginViewLeading: NSLayoutConstraint!
+    @IBOutlet weak var constrainLoginButtonViewTrailing: NSLayoutConstraint!
+    @IBOutlet weak var constrainLoginButtonViewLeading: NSLayoutConstraint!
     
     let dropDown = DropDown()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        UIsetup()
         
         loginBoxView.layer.cornerRadius = 6.0
         loginBoxView.layer.masksToBounds = true
@@ -54,19 +57,36 @@ class LoginViewController: UIViewController {
         loginButton.layer.shadowOffset = CGSize(width: 0,height: 2.0)
         loginButton.layer.shadowRadius = 2.0
         loginButton.layer.shadowOpacity = 1.0
-        loginButton.layer.shadowPath = UIBezierPath(roundedRect:loginButton.bounds, cornerRadius:loginButton.layer.cornerRadius).cgPath
+        //loginButton.layer.shadowPath = UIBezierPath(roundedRect:loginButton.bounds, cornerRadius:loginButton.layer.cornerRadius).cgPath
         
-        sendOtpBtn.layer.cornerRadius = 6.0
+        sendOtpBtn.layer.cornerRadius = 3.0
         sendOtpBtn.layer.masksToBounds = false
         sendOtpBtn.layer.shadowColor = UIColor.black.cgColor
         sendOtpBtn.layer.shadowOffset = CGSize(width: 0,height: 2.0)
-        sendOtpBtn.layer.shadowRadius = 2.0
+        sendOtpBtn.layer.shadowRadius = 1.0
         sendOtpBtn.layer.shadowOpacity = 1.0
-        sendOtpBtn.layer.shadowPath = UIBezierPath(roundedRect:sendOtpBtn.bounds, cornerRadius:sendOtpBtn.layer.cornerRadius).cgPath
+       // sendOtpBtn.layer.shadowPath = UIBezierPath(roundedRect:sendOtpBtn.bounds, cornerRadius:sendOtpBtn.layer.cornerRadius).cgPath
         
         inputText()
-        lblDropdownLanguage?.text = "English"
+        lblDefaultLanguage?.text = "English"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(true)
         dropDownSetup()
+
+    }
+    
+    //MARK: UISETUP
+    
+    func UIsetup() {
+        
+        if IS_IPAD {
+            constrainLoginViewLeading.constant = 80
+            constrainLoginViewTrailing.constant = 80
+            constrainLoginButtonViewLeading.constant = 80
+            constrainLoginButtonViewTrailing.constant = 80
+        }
     }
     
     // MARK: - LANGUAGE DROPDOWN
@@ -91,8 +111,8 @@ class LoginViewController: UIViewController {
         }
         
         dropDown.dataSource = languageDataSource as [AnyObject]
-        dropDown.width = self.lblDefaultLanguage.frame.width
-        dropDown.anchorView = self.lblDefaultLanguage
+        dropDown.width = self.btnDropDown.frame.width
+        dropDown.anchorView = self.btnDropDown
         dropDown.bottomOffset = CGPoint(x: 0, y:self.lblDefaultLanguage.bounds.height)
         
         self.dropDown.selectionAction = { [unowned self] (index, item) in

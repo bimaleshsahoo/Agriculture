@@ -17,11 +17,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DropDownCell" customModule="Agriculture" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="1265" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-pA-i6q">
-                    <rect key="frame" x="8" y="8" width="304" height="28"/>
+                    <rect key="frame" x="8" y="8" width="1249" height="28"/>
                     <fontDescription key="fontDescription" name="GothamNarrow-Book" family="GothamNarrow" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -39,6 +39,7 @@
             <connections>
                 <outlet property="optionLabel" destination="dhL-pA-i6q" id="1GT-db-EaA"/>
             </connections>
+            <point key="canvasLocation" x="808.79999999999995" y="48.575712143928037"/>
         </view>
     </objects>
 </document>
