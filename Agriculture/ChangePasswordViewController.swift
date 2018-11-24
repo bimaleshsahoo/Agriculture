@@ -9,7 +9,14 @@
 import UIKit
 
 class ChangePasswordViewController: UIViewController {
-
+    
+    @IBOutlet weak var tableViewQuesAns: UITableView!
+    @IBOutlet weak var tableCellQuesAns: UITableViewCell!
+    
+    @IBOutlet weak var lblQues: UILabel!
+    
+    @IBOutlet weak var lblAnswer: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
