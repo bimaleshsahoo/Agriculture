@@ -57,6 +57,7 @@ class ForgotPasswordViewController: UIViewController {
         btnSendOtp.layer.shadowRadius = 2.0
         btnSendOtp.layer.shadowOpacity = 1.0
         btnSendOtp.layer.shadowPath = UIBezierPath(roundedRect:btnSendOtp.bounds, cornerRadius:btnSendOtp.layer.cornerRadius).cgPath
+        btnSendOtp.titleLabel?.adjustsFontSizeToFitWidth = true
         
         usernamePasswordToggle.layer.cornerRadius = 5.0
         usernamePasswordToggle.layer.masksToBounds = true
