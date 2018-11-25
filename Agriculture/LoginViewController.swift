@@ -30,17 +30,10 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var btnDropDown: UIButton!
     
-    @IBOutlet weak var constrainLoginViewTrailing: NSLayoutConstraint!
-    @IBOutlet weak var constrainLoginViewLeading: NSLayoutConstraint!
-    @IBOutlet weak var constrainLoginButtonViewTrailing: NSLayoutConstraint!
-    @IBOutlet weak var constrainLoginButtonViewLeading: NSLayoutConstraint!
-    
     let dropDown = DropDown()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        UIsetup()
         
         loginBoxView.layer.cornerRadius = 6.0
         loginBoxView.layer.masksToBounds = true
@@ -75,18 +68,6 @@ class LoginViewController: UIViewController {
         super .viewDidAppear(true)
         dropDownSetup()
 
-    }
-    
-    //MARK: UISETUP
-    
-    func UIsetup() {
-        
-        if IS_IPAD {
-            constrainLoginViewLeading.constant = 80
-            constrainLoginViewTrailing.constant = 80
-            constrainLoginButtonViewLeading.constant = 80
-            constrainLoginButtonViewTrailing.constant = 80
-        }
     }
     
     // MARK: - LANGUAGE DROPDOWN

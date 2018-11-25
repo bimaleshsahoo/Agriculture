@@ -36,6 +36,7 @@
 		4310805921A8227F005B1D6E /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310805321A8227F005B1D6E /* DPDUIView+Extension.swift */; };
 		4310805D21A82984005B1D6E /* Languages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4310805C21A82984005B1D6E /* Languages.plist */; };
 		4310806021A9352C005B1D6E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310805F21A9352C005B1D6E /* Constants.swift */; };
+		431CDEB721AA954600B2F727 /* ChangePasswordQuesAnsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CDEB621AA954600B2F727 /* ChangePasswordQuesAnsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		4310805321A8227F005B1D6E /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DPDUIView+Extension.swift"; sourceTree = "<group>"; };
 		4310805C21A82984005B1D6E /* Languages.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Languages.plist; sourceTree = "<group>"; };
 		4310805F21A9352C005B1D6E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		431CDEB621AA954600B2F727 /* ChangePasswordQuesAnsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordQuesAnsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		34B61DEA21A597B500440200 = {
 			isa = PBXGroup;
 			children = (
+				431CDEB621AA954600B2F727 /* ChangePasswordQuesAnsTableViewCell.swift */,
 				34B61DF521A597B500440200 /* Agriculture */,
 				34B61DF421A597B500440200 /* Products */,
 			);
@@ -260,6 +263,7 @@
 				34B61E0921A5A57500440200 /* LoginViewController.swift in Sources */,
 				34C1FE8D21AA759A00716B1B /* ExpandableStyle.swift in Sources */,
 				34C1FE8B21AA759A00716B1B /* ExpandableCell.swift in Sources */,
+				431CDEB721AA954600B2F727 /* ChangePasswordQuesAnsTableViewCell.swift in Sources */,
 				4310805821A8227F005B1D6E /* DropDown.swift in Sources */,
 				34B61E4021A6E22400440200 /* NextViewController.swift in Sources */,
 				34C1FE8A21AA759A00716B1B /* ExpandableProcessor.swift in Sources */,
