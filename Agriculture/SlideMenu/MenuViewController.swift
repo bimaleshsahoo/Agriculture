@@ -12,8 +12,8 @@ protocol SlideMenuDelegate {
     func slideMenuItemSelectedAtIndex(_ index : Int32)
 }
 
-class MenuViewController: UIViewController, ExpandableDelegate {
-
+class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     var btnMenu : UIButton!
     var delegate : SlideMenuDelegate?
 
@@ -21,98 +21,82 @@ class MenuViewController: UIViewController, ExpandableDelegate {
     
     @IBOutlet weak var profileImage: UIImageView!
     
-    @IBOutlet weak var tableView: ExpandableTableView!
+    @IBOutlet weak var menuTableView: UITableView!
+    @IBOutlet weak var logoutView: UIView!
     
-    var cell: UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: ExpandedCell.ID)!
-    }
-    
-    var parentCells:[String] =
-        [NormalCell.ID,ExpandableCell2.ID]
+    var menuDataList = [MenuData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        tableView.expansionStyle = .single
-        
-        tableView.expandableDelegate = self
-        tableView.animation = .automatic
-        
-        tableView.register(UINib(nibName: "NormalCell", bundle: nil), forCellReuseIdentifier: NormalCell.ID)
-        tableView.register(UINib(nibName: "ExpandedCell", bundle: nil), forCellReuseIdentifier: ExpandedCell.ID)
-        tableView.register(UINib(nibName: "ExpandableCell", bundle: nil), forCellReuseIdentifier: ExpandableCell2.ID)
-        
-        
+        menuData()
         profileImage.layer.cornerRadius = profileImage.frame.height / 2
         profileImage.layer.masksToBounds = true
+        logout()
+
+    }
+    
+    //MARK: - Logout Functionality
+    func logout() {
         
+    let logoutTap = UITapGestureRecognizer(target: self, action: #selector(logoutTapped))
+    logoutView.addGestureRecognizer(logoutTap)
     }
     
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    @objc func logoutTapped() {
         
+        utilities.logoutAlert()
     }
     
-    func expandableTableView(_ expandableTableView: ExpandableTableView, heightsForExpandedRowAt indexPath: IndexPath) -> [CGFloat]? {
-        return [50, 50, 50]
+    //MARK: - Table View Delegates and Datasource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuDataList.count
     }
     
-    func expandableTableView(_ expandableTableView: ExpandableTableView, expandedCell: UITableViewCell, didSelectExpandedRowAt indexPath: IndexPath) {
-        if let cell = expandedCell as? ExpandedCell {
-            print("\(cell.titleLabel.text ?? "")")
-        }
-    }
-    
-    func expandableTableView(_ expandableTableView: ExpandableTableView, didSelectRowAt indexPath: IndexPath) {
-        print("didSelectRow:\(indexPath)")
-    }
-    
-    func expandableTableView(_ expandableTableView: ExpandableTableView, expandedCellsForRowAt indexPath: IndexPath) -> [UITableViewCell]? {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = menuTableView.dequeueReusableCell(withIdentifier: "menu", for: indexPath as IndexPath) as! SideMenuTableViewCell
         
-        switch indexPath.row {
-        case 1:
-            let cell1 = tableView.dequeueReusableCell(withIdentifier: ExpandedCell.ID) as! ExpandedCell
-            cell1.titleLabel.text = "First Expanded Cell"
-            let cell2 = tableView.dequeueReusableCell(withIdentifier: ExpandedCell.ID) as! ExpandedCell
-            cell2.titleLabel.text = "Second Expanded Cell"
-            let cell3 = tableView.dequeueReusableCell(withIdentifier: ExpandedCell.ID) as! ExpandedCell
-            cell3.titleLabel.text = "Third Expanded Cell"
-            return [cell1, cell2, cell3]
-            
-        default:
-            break
-        }
-        return nil
-    }
-    
-    func expandableTableView(_ expandableTableView: ExpandableTableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    
-    func expandableTableView(_ expandableTableView: ExpandableTableView, numberOfRowsInSection section: Int) -> Int {
-        return parentCells.count
-    }
-    
-    func expandableTableView(_ expandableTableView: ExpandableTableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = expandableTableView.dequeueReusableCell(withIdentifier: parentCells[indexPath.row]) else { return UITableViewCell() }
+        var data = MenuData()
+        
+        data = menuDataList[indexPath.row]
+        
+        cell.lblMenu.text = data.datMenuItems
+        
         return cell
     }
     
-    @IBAction func btn1(_ sender: Any) {
-    
-        let view = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
         
-        self.navigationController?.pushViewController(view, animated: true)
+            let view = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            
+            self.navigationController?.pushViewController(view, animated: true)
+        
+        } else if indexPath.row == 1 {
+            
+            let view = self.storyboard?.instantiateViewController(withIdentifier: "NewInsuranceViewController") as! NewInsuranceViewController
+            
+            self.navigationController?.pushViewController(view, animated: true)
+            
+        } else {
+            menuTableView.deselectRow(at: indexPath, animated: true)
+        }
     }
     
-    @IBAction func btn2(_ sender: Any) {
-        let view = self.storyboard?.instantiateViewController(withIdentifier: "NextViewController") as! NextViewController
+    func menuData() {
         
-        self.navigationController?.pushViewController(view, animated: true)
+        for i in 0...7 {
+            
+            let menuData = MenuData()
+            
+            menuData.datMenuItems = menuItems[i]
+            
+            menuDataList.append(menuData)
+            
+        }
+        
     }
     
     @IBAction func onCloseMenuClick(_ button: UIButton!) {

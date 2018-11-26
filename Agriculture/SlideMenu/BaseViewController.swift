@@ -63,6 +63,32 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         self.navigationItem.leftBarButtonItem = customBarItem;
     }
     
+    // Search and Notification
+    func setUpNavBar(){
+        
+        let notificationBtn = UIButton(type: .custom)
+        notificationBtn.setImage(UIImage(named: "notification"), for: .normal)
+        notificationBtn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        notificationBtn.addTarget(self, action: #selector(notify), for: .touchUpInside)
+        let item1 = UIBarButtonItem(customView: notificationBtn)
+        
+        let searchBtn = UIButton(type: .custom)
+        searchBtn.setImage(UIImage(named: "search"), for: .normal)
+        searchBtn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        searchBtn.addTarget(self, action: #selector(search), for: .touchUpInside)
+        let item2 = UIBarButtonItem(customView: searchBtn)
+        
+        self.navigationItem.setRightBarButtonItems([item1,item2], animated: true)
+    }
+    
+    @objc func notify() {
+        print("Notification Tapped")
+    }
+    
+    @objc func search() {
+        print("Search Tapped")
+    }
+    
     func defaultMenuImage() -> UIImage {
         var defaultMenuImage = UIImage()
         

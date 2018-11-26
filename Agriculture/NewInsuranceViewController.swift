@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  NewInsuranceViewController.swift
 //  Agriculture
 //
 //  Created by Bimalesh Sahoo on 22/11/18.
@@ -8,17 +8,18 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class NewInsuranceViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
     //MARK: - SIDE MENU BUTTON
         
         addSlideMenuButton()
         setUpNavBar()
+        
         // Do any additional setup after loading the view.
     }
-
+    
 
 }

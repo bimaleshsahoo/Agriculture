@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		346606F221ABE02900E312A4 /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346606F121ABE02900E312A4 /* utilities.swift */; };
 		34B61DF721A597B500440200 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61DF621A597B500440200 /* AppDelegate.swift */; };
 		34B61DFC21A597B600440200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34B61DFA21A597B600440200 /* Main.storyboard */; };
 		34B61DFE21A597B800440200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B61DFD21A597B800440200 /* Assets.xcassets */; };
@@ -17,17 +18,9 @@
 		34B61E0F21A6903C00440200 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61E0E21A6903C00440200 /* ChangePasswordViewController.swift */; };
 		34B61E3C21A6D96100440200 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61E3B21A6D96100440200 /* BaseViewController.swift */; };
 		34B61E3E21A6D9A200440200 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61E3D21A6D9A200440200 /* MenuViewController.swift */; };
-		34B61E4021A6E22400440200 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61E3F21A6E22400440200 /* NextViewController.swift */; };
-		34C1FE8A21AA759A00716B1B /* ExpandableProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1FE8221AA759A00716B1B /* ExpandableProcessor.swift */; };
-		34C1FE8B21AA759A00716B1B /* ExpandableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1FE8421AA759A00716B1B /* ExpandableCell.swift */; };
-		34C1FE8C21AA759A00716B1B /* ExpandableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1FE8521AA759A00716B1B /* ExpandableDelegate.swift */; };
-		34C1FE8D21AA759A00716B1B /* ExpandableStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1FE8621AA759A00716B1B /* ExpandableStyle.swift */; };
-		34C1FE8E21AA759A00716B1B /* ExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1FE8721AA759A00716B1B /* ExpandableTableView.swift */; };
-		34C1FE9021AA759A00716B1B /* ExpandableCell.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C1FE8921AA759A00716B1B /* ExpandableCell.xcassets */; };
-		34C1FECE21AA765B00716B1B /* ExpandedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C1FEC821AA765A00716B1B /* ExpandedCell.xib */; };
-		34C1FECF21AA765B00716B1B /* ExpandableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1FEC921AA765B00716B1B /* ExpandableCells.swift */; };
-		34C1FED021AA765B00716B1B /* ExpandableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C1FECA21AA765B00716B1B /* ExpandableCell.xib */; };
-		34C1FED221AA765B00716B1B /* NormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C1FECC21AA765B00716B1B /* NormalCell.xib */; };
+		34B61E4021A6E22400440200 /* NewInsuranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B61E3F21A6E22400440200 /* NewInsuranceViewController.swift */; };
+		34C1FED621AB1CA300716B1B /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1FED521AB1CA300716B1B /* SideMenuTableViewCell.swift */; };
+		34C1FED821AB1E2C00716B1B /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1FED721AB1E2C00716B1B /* MenuData.swift */; };
 		4310805421A8227F005B1D6E /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4310804E21A8227F005B1D6E /* DropDownCell.xib */; };
 		4310805521A8227F005B1D6E /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310804F21A8227F005B1D6E /* DPDConstants.swift */; };
 		4310805621A8227F005B1D6E /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4310805021A8227F005B1D6E /* DropDownCell.swift */; };
@@ -40,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		346606F121ABE02900E312A4 /* utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilities.swift; sourceTree = "<group>"; };
 		34B61DF321A597B500440200 /* Agriculture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agriculture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B61DF621A597B500440200 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34B61DFB21A597B600440200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,18 +46,9 @@
 		34B61E0E21A6903C00440200 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		34B61E3B21A6D96100440200 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		34B61E3D21A6D9A200440200 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		34B61E3F21A6E22400440200 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
-		34C1FE8221AA759A00716B1B /* ExpandableProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableProcessor.swift; sourceTree = "<group>"; };
-		34C1FE8321AA759A00716B1B /* ExpandableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandableCell.h; sourceTree = "<group>"; };
-		34C1FE8421AA759A00716B1B /* ExpandableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableCell.swift; sourceTree = "<group>"; };
-		34C1FE8521AA759A00716B1B /* ExpandableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableDelegate.swift; sourceTree = "<group>"; };
-		34C1FE8621AA759A00716B1B /* ExpandableStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableStyle.swift; sourceTree = "<group>"; };
-		34C1FE8721AA759A00716B1B /* ExpandableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableView.swift; sourceTree = "<group>"; };
-		34C1FE8921AA759A00716B1B /* ExpandableCell.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ExpandableCell.xcassets; sourceTree = "<group>"; };
-		34C1FEC821AA765A00716B1B /* ExpandedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandedCell.xib; sourceTree = "<group>"; };
-		34C1FEC921AA765B00716B1B /* ExpandableCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableCells.swift; sourceTree = "<group>"; };
-		34C1FECA21AA765B00716B1B /* ExpandableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandableCell.xib; sourceTree = "<group>"; };
-		34C1FECC21AA765B00716B1B /* NormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NormalCell.xib; sourceTree = "<group>"; };
+		34B61E3F21A6E22400440200 /* NewInsuranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInsuranceViewController.swift; sourceTree = "<group>"; };
+		34C1FED521AB1CA300716B1B /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		34C1FED721AB1E2C00716B1B /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
 		4310804E21A8227F005B1D6E /* DropDownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownCell.xib; sourceTree = "<group>"; };
 		4310804F21A8227F005B1D6E /* DPDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPDConstants.swift; sourceTree = "<group>"; };
 		4310805021A8227F005B1D6E /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
@@ -90,7 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				34B61E3B21A6D96100440200 /* BaseViewController.swift */,
+				34C1FED721AB1E2C00716B1B /* MenuData.swift */,
 				34B61E3D21A6D9A200440200 /* MenuViewController.swift */,
+				34C1FED521AB1CA300716B1B /* SideMenuTableViewCell.swift */,
 			);
 			path = SlideMenu;
 			sourceTree = "<group>";
@@ -117,12 +104,12 @@
 			children = (
 				34B61DF621A597B500440200 /* AppDelegate.swift */,
 				34B61E0821A5A57500440200 /* LoginViewController.swift */,
+				346606F121ABE02900E312A4 /* utilities.swift */,
 				4310805F21A9352C005B1D6E /* Constants.swift */,
 				34B61E0E21A6903C00440200 /* ChangePasswordViewController.swift */,
 				34B61E0A21A5D08700440200 /* ForgotPasswordViewController.swift */,
 				34B61E0C21A60E5300440200 /* HomeViewController.swift */,
-				34B61E3F21A6E22400440200 /* NextViewController.swift */,
-				34C1FE8121AA759A00716B1B /* ExpandableCell */,
+				34B61E3F21A6E22400440200 /* NewInsuranceViewController.swift */,
 				344ABE6421A7DEBA004703F8 /* SlideMenu */,
 				4310804D21A82270005B1D6E /* DropDown */,
 				4310805E21A84241005B1D6E /* Plist files */,
@@ -132,32 +119,6 @@
 				34B61E0221A597B800440200 /* Info.plist */,
 			);
 			path = Agriculture;
-			sourceTree = "<group>";
-		};
-		34C1FE8121AA759A00716B1B /* ExpandableCell */ = {
-			isa = PBXGroup;
-			children = (
-				34C1FE8221AA759A00716B1B /* ExpandableProcessor.swift */,
-				34C1FE8321AA759A00716B1B /* ExpandableCell.h */,
-				34C1FE8421AA759A00716B1B /* ExpandableCell.swift */,
-				34C1FE8521AA759A00716B1B /* ExpandableDelegate.swift */,
-				34C1FE8621AA759A00716B1B /* ExpandableStyle.swift */,
-				34C1FE8721AA759A00716B1B /* ExpandableTableView.swift */,
-				34C1FE8921AA759A00716B1B /* ExpandableCell.xcassets */,
-				34C1FED321AA766300716B1B /* Cell */,
-			);
-			path = ExpandableCell;
-			sourceTree = "<group>";
-		};
-		34C1FED321AA766300716B1B /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				34C1FEC921AA765B00716B1B /* ExpandableCells.swift */,
-				34C1FECC21AA765B00716B1B /* NormalCell.xib */,
-				34C1FECA21AA765B00716B1B /* ExpandableCell.xib */,
-				34C1FEC821AA765A00716B1B /* ExpandedCell.xib */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		4310804D21A82270005B1D6E /* DropDown */ = {
@@ -239,11 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34C1FECE21AA765B00716B1B /* ExpandedCell.xib in Resources */,
 				34B61E0121A597B800440200 /* LaunchScreen.storyboard in Resources */,
-				34C1FED221AA765B00716B1B /* NormalCell.xib in Resources */,
-				34C1FED021AA765B00716B1B /* ExpandableCell.xib in Resources */,
-				34C1FE9021AA759A00716B1B /* ExpandableCell.xcassets in Resources */,
 				34B61DFE21A597B800440200 /* Assets.xcassets in Resources */,
 				4310805421A8227F005B1D6E /* DropDownCell.xib in Resources */,
 				34B61DFC21A597B600440200 /* Main.storyboard in Resources */,
@@ -258,25 +215,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				346606F221ABE02900E312A4 /* utilities.swift in Sources */,
 				4310805621A8227F005B1D6E /* DropDownCell.swift in Sources */,
 				4310805921A8227F005B1D6E /* DPDUIView+Extension.swift in Sources */,
 				34B61E0921A5A57500440200 /* LoginViewController.swift in Sources */,
-				34C1FE8D21AA759A00716B1B /* ExpandableStyle.swift in Sources */,
-				34C1FE8B21AA759A00716B1B /* ExpandableCell.swift in Sources */,
+				34C1FED621AB1CA300716B1B /* SideMenuTableViewCell.swift in Sources */,
 				431CDEB721AA954600B2F727 /* ChangePasswordQuesAnsTableViewCell.swift in Sources */,
 				4310805821A8227F005B1D6E /* DropDown.swift in Sources */,
-				34B61E4021A6E22400440200 /* NextViewController.swift in Sources */,
-				34C1FE8A21AA759A00716B1B /* ExpandableProcessor.swift in Sources */,
+				34B61E4021A6E22400440200 /* NewInsuranceViewController.swift in Sources */,
 				4310805721A8227F005B1D6E /* DPDKeyboardListener.swift in Sources */,
-				34C1FE8C21AA759A00716B1B /* ExpandableDelegate.swift in Sources */,
+				34C1FED821AB1E2C00716B1B /* MenuData.swift in Sources */,
 				34B61DF721A597B500440200 /* AppDelegate.swift in Sources */,
 				34B61E0B21A5D08700440200 /* ForgotPasswordViewController.swift in Sources */,
 				34B61E3E21A6D9A200440200 /* MenuViewController.swift in Sources */,
 				34B61E0F21A6903C00440200 /* ChangePasswordViewController.swift in Sources */,
 				4310805521A8227F005B1D6E /* DPDConstants.swift in Sources */,
-				34C1FECF21AA765B00716B1B /* ExpandableCells.swift in Sources */,
 				4310806021A9352C005B1D6E /* Constants.swift in Sources */,
-				34C1FE8E21AA759A00716B1B /* ExpandableTableView.swift in Sources */,
 				34B61E0D21A60E5300440200 /* HomeViewController.swift in Sources */,
 				34B61E3C21A6D96100440200 /* BaseViewController.swift in Sources */,
 			);
