@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginBoxView: UIView!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var forgotPassBtn: UIButton!
     @IBOutlet weak var sendOtpBtn: UIButton!
     
     @IBOutlet weak var mobileTextfield: UITextField!
@@ -51,6 +52,7 @@ class LoginViewController: UIViewController {
         loginButton.layer.shadowRadius = 2.0
         loginButton.layer.shadowOpacity = 1.0
         //loginButton.layer.shadowPath = UIBezierPath(roundedRect:loginButton.bounds, cornerRadius:loginButton.layer.cornerRadius).cgPath
+        forgotPassBtn.titleLabel?.adjustsFontSizeToFitWidth = true
         
         sendOtpBtn.layer.cornerRadius = 3.0
         sendOtpBtn.layer.masksToBounds = false
@@ -59,6 +61,7 @@ class LoginViewController: UIViewController {
         sendOtpBtn.layer.shadowRadius = 1.0
         sendOtpBtn.layer.shadowOpacity = 1.0
        // sendOtpBtn.layer.shadowPath = UIBezierPath(roundedRect:sendOtpBtn.bounds, cornerRadius:sendOtpBtn.layer.cornerRadius).cgPath
+        sendOtpBtn.titleLabel?.adjustsFontSizeToFitWidth = true
         
         inputText()
         lblDefaultLanguage?.text = "English"

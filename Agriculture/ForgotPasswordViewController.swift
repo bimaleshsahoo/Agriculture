@@ -34,6 +34,8 @@ class ForgotPasswordViewController: UIViewController {
     @IBOutlet weak var usernamePasswordToggle: UISegmentedControl!
     @IBOutlet weak var otpToggle: UISegmentedControl!
     
+    @IBOutlet weak var quesDropBtn: UIButton!
+     let dropDown = DropDown()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -65,6 +67,11 @@ class ForgotPasswordViewController: UIViewController {
         otpToggle.layer.cornerRadius = 5.0
         otpToggle.layer.masksToBounds = true
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        dropDownSetup()
     }
     
     func questionBox() {
@@ -142,6 +149,21 @@ class ForgotPasswordViewController: UIViewController {
         }
     }
     
+    func dropDownSetup() {
+        
+        
+        dropDown.dataSource = arrQuestions as [AnyObject]
+        dropDown.width = self.quesDropBtn.frame.width
+        dropDown.anchorView = self.quesDropBtn
+        dropDown.bottomOffset = CGPoint(x: 0, y:self.lblQuestion.bounds.height)
+        
+        self.dropDown.selectionAction = { [unowned self] (index, item) in
+            self.dropDown.deselectRowAtIndexPath(index)
+            self.lblQuestion.text = item
+        }
+        
+    }
+    
     
     func forgotPasswordBox() {
         
@@ -165,5 +187,16 @@ class ForgotPasswordViewController: UIViewController {
         toggleOtp()
     }
     
+    
+    @IBAction func quesDropTapped(_ sender: Any) {
+        
+        if dropDown.isHidden{
+            dropDown.show()
+        }
+        else
+        {
+            dropDown.hide()
+        }
+    }
     
 }

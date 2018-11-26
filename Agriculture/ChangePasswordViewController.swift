@@ -38,6 +38,7 @@ class ChangePasswordViewController: UIViewController,UITableViewDelegate,UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuesAnsCell", for: indexPath) as! ChangePasswordQuesAnsTableViewCell
         
         cell.layer.cornerRadius = cell.frame.size.height * 0.05
+        cell.setUpDropDown()
         return cell
         
     }

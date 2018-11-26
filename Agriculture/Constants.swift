@@ -13,3 +13,5 @@ import UIKit
 let IS_IPAD = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad ? true:false
 
 var menuItems : [String] = ["Home", "New Insurance", "Existing Insurance", "Claim Initiation", "My Documents", "Refund of Claim", "Product Information", "Check Eligibility"]
+
+var arrQuestions = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit?","Aliquam mollis tortor a tempor congue?","Nam eget metus non leo faucibus commodo vel ac diam?","Vestibulum nec sem eget arcu molestie consectetur in id ante?","In in orci finibus, ultricies enim ut, accumsan sem?"]

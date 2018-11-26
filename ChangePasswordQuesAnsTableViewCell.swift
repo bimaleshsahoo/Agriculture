@@ -20,7 +20,7 @@ class ChangePasswordQuesAnsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         arrQuestions = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit?","Aliquam mollis tortor a tempor congue?","Nam eget metus non leo faucibus commodo vel ac diam?","Vestibulum nec sem eget arcu molestie consectetur in id ante?","In in orci finibus, ultricies enim ut, accumsan sem?"]
-        setUpDropDown()
+       // setUpDropDown()
         // Initialization code
     }
 
@@ -35,7 +35,7 @@ class ChangePasswordQuesAnsTableViewCell: UITableViewCell {
         dropDown.dataSource = arrQuestions! as [AnyObject]
         dropDown.anchorView = btnQuestion
         dropDown.bottomOffset = CGPoint(x: 0, y:self.btnQuestion.bounds.height)
-        dropDown.width = btnQuestion.frame.width
+        dropDown.width = self.contentView.frame.size.width * 0.95
 
         
         self.dropDown.selectionAction = { [unowned self] (index, item) in
