@@ -30,6 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lblDefaultLanguage: UILabel!
     
     @IBOutlet weak var btnDropDown: UIButton!
+    @IBOutlet weak var btnShowPassword: UIButton!
     
     let dropDown = DropDown()
     var showPassword = true
@@ -76,7 +77,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(true)
         dropDownSetup()
-
+    
     }
     
     // MARK: - LANGUAGE DROPDOWN
@@ -197,10 +198,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if showPassword == true {
             passwordTextField.isSecureTextEntry = false
             showPassword = false
+            btnShowPassword.setTitle("Hide Password", for: .normal)
         } else {
             passwordTextField.isSecureTextEntry = true
             showPassword = true
+            btnShowPassword.setTitle("Show Password", for: .normal)
         }
+        
         
     }
     

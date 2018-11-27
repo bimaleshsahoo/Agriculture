@@ -49,4 +49,5 @@ class utilities {
         
         viewController.present(logoutAlert, animated: true, completion: nil)
     }
+    
 }

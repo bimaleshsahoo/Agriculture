@@ -973,35 +973,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-IO-qRg">
                                 <rect key="frame" x="0.0" y="20" width="300" height="716"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3pz-be-IVh">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3pz-be-IVh" customClass="ExpandableTableView" customModule="Agriculture" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="216" width="300" height="500"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menu" rowHeight="50" id="d5a-66-uZj" customClass="SideMenuTableViewCell" customModule="Agriculture" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="300" height="50"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d5a-66-uZj" id="Gmd-pb-K29" customClass="SideMenuTableViewCell" customModule="Agriculture" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="49.666666666666664"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1g-n7-TiS">
-                                                            <rect key="frame" x="25" y="15" width="250" height="20"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </tableViewCellContentView>
-                                                <connections>
-                                                    <outlet property="lblMenu" destination="O1g-n7-TiS" id="XZI-Ov-iPr"/>
-                                                </connections>
-                                            </tableViewCell>
-                                        </prototypes>
-                                        <connections>
-                                            <outlet property="dataSource" destination="Yag-gS-ZNM" id="VA8-Zp-9XM"/>
-                                            <outlet property="delegate" destination="Yag-gS-ZNM" id="xrU-GN-haP"/>
-                                        </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9KZ-Gd-5DM">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="216"/>
@@ -1100,7 +1074,7 @@
                     <connections>
                         <outlet property="btnCloseMenuOverlay" destination="bsG-RQ-16S" id="dIn-aa-bnC"/>
                         <outlet property="logoutView" destination="g3e-RY-vYV" id="Ap2-Kg-reA"/>
-                        <outlet property="menuTableView" destination="3pz-be-IVh" id="t9w-ig-0Cf"/>
+                        <outlet property="menuTableView" destination="3pz-be-IVh" id="MED-5W-Mrd"/>
                         <outlet property="profileImage" destination="gOJ-69-PWH" id="q4G-W9-G5Q"/>
                     </connections>
                 </viewController>
@@ -1187,7 +1161,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohe-Xp-gj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6286" y="133"/>
+            <point key="canvasLocation" x="1345" y="1029"/>
+        </scene>
+        <!--Money Receipts View Controller-->
+        <scene sceneID="3SB-9Z-24Y">
+            <objects>
+                <viewController storyboardIdentifier="MoneyReceiptsViewController" id="Uw6-cr-uBs" customClass="MoneyReceiptsViewController" customModule="Agriculture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Ua-HM-2Ef">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money Receipts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2g-XF-F5b">
+                                <rect key="frame" x="146" y="100" width="122.33333333333331" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="lcG-EV-9iO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l2g-XF-F5b" firstAttribute="top" secondItem="DZS-nb-ebu" secondAttribute="top" constant="80" id="Kq4-BA-pMg"/>
+                            <constraint firstItem="l2g-XF-F5b" firstAttribute="centerX" secondItem="3Ua-HM-2Ef" secondAttribute="centerX" id="rBq-pz-Jtw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DZS-nb-ebu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPl-Lu-K0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2157" y="1029"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="38n-jg-zyV">
@@ -1387,7 +1391,7 @@
                                                 </constraints>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="JLz-L8-hwE">
-                                                <rect key="frame" x="8" y="66" width="32" height="32"/>
+                                                <rect key="frame" x="8" y="65.666666666666629" width="32" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="JLz-L8-hwE" secondAttribute="height" multiplier="1:1" id="8ju-JE-Fxa"/>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="RD1-wM-4e3"/>
@@ -1648,6 +1652,7 @@
                     <navigationItem key="navigationItem" id="Eea-MA-UYI"/>
                     <connections>
                         <outlet property="btnDropDown" destination="9Gy-GF-I5M" id="YyD-fa-PAM"/>
+                        <outlet property="btnShowPassword" destination="EK4-Sm-FNG" id="KXe-ny-SZN"/>
                         <outlet property="captchaTextfield" destination="Ilc-VN-nBl" id="Dcl-gy-awK"/>
                         <outlet property="defaultLanguageView" destination="AKi-JN-0oK" id="SwV-Do-Tav"/>
                         <outlet property="forgotPassBtn" destination="rG8-OR-qjs" id="ViS-Ub-0Mt"/>
@@ -1683,7 +1688,157 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4eB-Mg-er0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1270" y="133"/>
+            <point key="canvasLocation" x="1345" y="133"/>
+        </scene>
+        <!--Pay Preview View Controller-->
+        <scene sceneID="vW1-0p-DA5">
+            <objects>
+                <viewController storyboardIdentifier="PayPreviewViewController" id="Pc5-Ct-mfe" customClass="PayPreviewViewController" customModule="Agriculture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9D8-ml-ryz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay Preview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1q-3b-xOj">
+                                <rect key="frame" x="161" y="100" width="92.333333333333314" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="iy6-hq-sU6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b1q-3b-xOj" firstAttribute="centerX" secondItem="9D8-ml-ryz" secondAttribute="centerX" id="bN9-UB-IqA"/>
+                            <constraint firstItem="b1q-3b-xOj" firstAttribute="top" secondItem="mCd-sN-bY7" secondAttribute="top" constant="80" id="ibG-UG-WWe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mCd-sN-bY7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yCS-Tr-ICF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2993" y="1029"/>
+        </scene>
+        <!--Create New Farmer View Controller-->
+        <scene sceneID="R8z-M2-Ja0">
+            <objects>
+                <viewController storyboardIdentifier="CreateNewFarmerViewController" id="Niu-bP-8KA" customClass="CreateNewFarmerViewController" customModule="Agriculture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WFg-mP-XOx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Farmer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bm5-DO-qbV">
+                                <rect key="frame" x="133" y="100" width="148" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Fe5-Ce-bf9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bm5-DO-qbV" firstAttribute="centerX" secondItem="WFg-mP-XOx" secondAttribute="centerX" id="IKo-Cf-chL"/>
+                            <constraint firstItem="Bm5-DO-qbV" firstAttribute="top" secondItem="5aD-cL-VIB" secondAttribute="top" constant="80" id="ckr-jG-Fvq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5aD-cL-VIB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IiG-dG-ZKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3822" y="1029"/>
+        </scene>
+        <!--Pay History View Controller-->
+        <scene sceneID="EbY-2b-2Qe">
+            <objects>
+                <viewController storyboardIdentifier="PayHistoryViewController" id="NmB-XH-4r7" customClass="PayHistoryViewController" customModule="Agriculture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tfP-Dq-GPG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YV6-io-lMa">
+                                <rect key="frame" x="163.66666666666666" y="100" width="87" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="hpC-3T-H28"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YV6-io-lMa" firstAttribute="top" secondItem="k8b-Cs-v44" secondAttribute="top" constant="80" id="1Yv-73-UDH"/>
+                            <constraint firstItem="YV6-io-lMa" firstAttribute="centerX" secondItem="tfP-Dq-GPG" secondAttribute="centerX" id="CWU-Sp-frB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k8b-Cs-v44"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxj-Jh-2vY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4674" y="1029"/>
+        </scene>
+        <!--Coinsurrent Payment View Controller-->
+        <scene sceneID="dX5-uU-Te1">
+            <objects>
+                <viewController storyboardIdentifier="CoinsurrentPaymentViewController" id="onX-oq-ifC" customClass="CoinsurrentPaymentViewController" customModule="Agriculture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CdQ-Eq-axb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coinsurrent Payment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUk-0u-l38">
+                                <rect key="frame" x="126.66666666666669" y="100" width="161" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="hHZ-Xm-PtR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cUk-0u-l38" firstAttribute="top" secondItem="qRe-MO-JUe" secondAttribute="top" constant="80" id="8dG-1e-eCC"/>
+                            <constraint firstItem="cUk-0u-l38" firstAttribute="centerX" secondItem="CdQ-Eq-axb" secondAttribute="centerX" id="fyi-I0-YEx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qRe-MO-JUe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w7q-Mi-0oW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5541" y="1029"/>
+        </scene>
+        <!--Disbursals View Controller-->
+        <scene sceneID="jy7-El-Jt4">
+            <objects>
+                <viewController storyboardIdentifier="DisbursalsViewController" id="yRu-8S-icc" customClass="DisbursalsViewController" customModule="Agriculture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z3d-6r-Ke1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disbursals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zl-Cn-Suh">
+                                <rect key="frame" x="167" y="100" width="80" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="jeP-h3-Eyg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4zl-Cn-Suh" firstAttribute="top" secondItem="aOu-wS-WJT" secondAttribute="top" constant="80" id="Vo3-hQ-ABT"/>
+                            <constraint firstItem="4zl-Cn-Suh" firstAttribute="centerX" secondItem="z3d-6r-Ke1" secondAttribute="centerX" id="zTO-GI-C8X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aOu-wS-WJT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Nq-Av-twU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6399" y="1029"/>
         </scene>
     </scenes>
     <resources>
