@@ -53,7 +53,7 @@ class LoginViewController: UIViewController {
         loginButton.layer.shadowOpacity = 1.0
         //loginButton.layer.shadowPath = UIBezierPath(roundedRect:loginButton.bounds, cornerRadius:loginButton.layer.cornerRadius).cgPath
         forgotPassBtn.titleLabel?.adjustsFontSizeToFitWidth = true
-        
+        forgotPassBtn.contentVerticalAlignment = .top
         sendOtpBtn.layer.cornerRadius = 3.0
         sendOtpBtn.layer.masksToBounds = false
         sendOtpBtn.layer.shadowColor = UIColor.black.cgColor
@@ -62,6 +62,7 @@ class LoginViewController: UIViewController {
         sendOtpBtn.layer.shadowOpacity = 1.0
        // sendOtpBtn.layer.shadowPath = UIBezierPath(roundedRect:sendOtpBtn.bounds, cornerRadius:sendOtpBtn.layer.cornerRadius).cgPath
         sendOtpBtn.titleLabel?.adjustsFontSizeToFitWidth = true
+        
         
         inputText()
         lblDefaultLanguage?.text = "English"

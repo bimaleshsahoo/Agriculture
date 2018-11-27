@@ -85,7 +85,6 @@
 		34B61DEA21A597B500440200 = {
 			isa = PBXGroup;
 			children = (
-				431CDEB621AA954600B2F727 /* ChangePasswordQuesAnsTableViewCell.swift */,
 				34B61DF521A597B500440200 /* Agriculture */,
 				34B61DF421A597B500440200 /* Products */,
 			);
@@ -103,13 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				34B61DF621A597B500440200 /* AppDelegate.swift */,
-				34B61E0821A5A57500440200 /* LoginViewController.swift */,
 				346606F121ABE02900E312A4 /* utilities.swift */,
 				4310805F21A9352C005B1D6E /* Constants.swift */,
-				34B61E0E21A6903C00440200 /* ChangePasswordViewController.swift */,
-				34B61E0A21A5D08700440200 /* ForgotPasswordViewController.swift */,
-				34B61E0C21A60E5300440200 /* HomeViewController.swift */,
-				34B61E3F21A6E22400440200 /* NewInsuranceViewController.swift */,
+				43030C8421AD0AAB00E6F70E /* ViewControllers */,
+				43030C8321AD0A9000E6F70E /* Custom cells */,
 				344ABE6421A7DEBA004703F8 /* SlideMenu */,
 				4310804D21A82270005B1D6E /* DropDown */,
 				4310805E21A84241005B1D6E /* Plist files */,
@@ -119,6 +115,26 @@
 				34B61E0221A597B800440200 /* Info.plist */,
 			);
 			path = Agriculture;
+			sourceTree = "<group>";
+		};
+		43030C8321AD0A9000E6F70E /* Custom cells */ = {
+			isa = PBXGroup;
+			children = (
+				431CDEB621AA954600B2F727 /* ChangePasswordQuesAnsTableViewCell.swift */,
+			);
+			path = "Custom cells";
+			sourceTree = "<group>";
+		};
+		43030C8421AD0AAB00E6F70E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				34B61E0821A5A57500440200 /* LoginViewController.swift */,
+				34B61E0E21A6903C00440200 /* ChangePasswordViewController.swift */,
+				34B61E0A21A5D08700440200 /* ForgotPasswordViewController.swift */,
+				34B61E0C21A60E5300440200 /* HomeViewController.swift */,
+				34B61E3F21A6E22400440200 /* NewInsuranceViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		4310804D21A82270005B1D6E /* DropDown */ = {

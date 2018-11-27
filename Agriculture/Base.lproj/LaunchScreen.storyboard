@@ -30,9 +30,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FJz-j0-AG6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="70Q-vv-yM2"/>
+                            <constraint firstItem="FJz-j0-AG6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="70Q-vv-yM2">
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
                             <constraint firstItem="ToM-Ff-S1d" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="NE3-UB-XuQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FJz-j0-AG6" secondAttribute="trailing" constant="10" id="XNw-Py-6m6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FJz-j0-AG6" secondAttribute="trailing" constant="10" id="XNw-Py-6m6">
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="ToM-Ff-S1d" secondAttribute="trailing" id="iWL-5Q-sUD"/>
                             <constraint firstAttribute="bottom" secondItem="ToM-Ff-S1d" secondAttribute="bottom" id="nue-ZP-j7W"/>
                             <constraint firstItem="FJz-j0-AG6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vnP-hy-mbs"/>
