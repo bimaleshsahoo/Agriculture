@@ -161,9 +161,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-        
-        return false
-    }
+
     
     //MARK: - BUTTON ACTIONS
     @IBAction func loginToggleTapped(_ sender: Any) {
