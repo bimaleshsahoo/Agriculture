@@ -370,7 +370,10 @@
                     <navigationItem key="navigationItem" id="yFX-Op-3ya"/>
                     <connections>
                         <outlet property="btnLetsGo" destination="gDa-sm-4At" id="G9Z-ox-Zsw"/>
+                        <outlet property="confirmPassTextfield" destination="GIc-zu-8pO" id="5dT-hY-x4d"/>
                         <outlet property="contentView" destination="9CU-L8-dkq" id="3xp-Mk-3q9"/>
+                        <outlet property="newPassTextfield" destination="Iym-pD-fiH" id="b3V-z7-RXW"/>
+                        <outlet property="oldPassTextfield" destination="jKP-Qe-DHz" id="Kyl-50-XXL"/>
                         <outlet property="passwordView" destination="Jkx-KJ-cv9" id="48k-Ab-cGJ"/>
                         <outlet property="scrollView" destination="qOe-E3-MIV" id="YSE-vj-CwN"/>
                         <outlet property="tableViewQuesAns" destination="aOG-xO-hF2" id="8rF-pV-7I9"/>
@@ -584,7 +587,7 @@
                                                 <rect key="frame" x="53" y="7.3333333333333144" width="297" height="35"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLb-Ty-5K2">
                                                 <rect key="frame" x="8" y="42.333333333333314" width="342" height="1"/>
@@ -1371,7 +1374,7 @@
                                                 <rect key="frame" x="49" y="10" width="301" height="40.666666666666664"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="_placeholderLabel.adjustsFontSizeToFitWidth" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
@@ -1394,7 +1397,7 @@
                                                 <rect key="frame" x="49" y="61.666666666666629" width="301" height="40.333333333333343"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7b-vv-owu">
                                                 <rect key="frame" x="8" y="102" width="342" height="1"/>
@@ -1529,7 +1532,7 @@
                                                 <rect key="frame" x="8" y="48" width="358" height="38"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLa-bX-5n6">
                                                 <rect key="frame" x="8" y="86" width="358" height="1"/>

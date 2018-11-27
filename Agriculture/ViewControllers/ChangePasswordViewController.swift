@@ -8,13 +8,17 @@
 
 import UIKit
 
-class ChangePasswordViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate {
+class ChangePasswordViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var tableViewQuesAns: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var btnLetsGo: UIButton!
+    
+    @IBOutlet weak var oldPassTextfield: UITextField!
+    @IBOutlet weak var newPassTextfield: UITextField!
+    @IBOutlet weak var confirmPassTextfield: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +38,7 @@ class ChangePasswordViewController: UIViewController,UITableViewDelegate,UITable
         btnLetsGo.layer.shadowOpacity = 1.0
         btnLetsGo.layer.shouldRasterize = true
         
+        hideKeyboardWhenTappedAround()
         scrollView.contentSize = contentView.frame.size
         passwordView.layer.cornerRadius = passwordView.frame.height * 0.05
     }

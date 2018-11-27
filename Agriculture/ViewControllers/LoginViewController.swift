@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var loginBoxView: UIView!
     @IBOutlet weak var loginButton: UIButton!
@@ -66,6 +66,7 @@ class LoginViewController: UIViewController {
         sendOtpBtn.titleLabel?.adjustsFontSizeToFitWidth = true
         
         inputText()
+        hideKeyboardWhenTappedAround()
         lblDefaultLanguage?.text = "English"
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -105,8 +106,8 @@ class LoginViewController: UIViewController {
         dropDown.bottomOffset = CGPoint(x: 0, y:self.lblDefaultLanguage.bounds.height)
         
         self.dropDown.selectionAction = { [unowned self] (index, item) in
-            self.dropDown.deselectRowAtIndexPath(index)
-            self.lblDefaultLanguage.text = item
+        self.dropDown.deselectRowAtIndexPath(index)
+        self.lblDefaultLanguage.text = item
         }
             
     }
@@ -160,6 +161,9 @@ class LoginViewController: UIViewController {
         }
     }
     
+        
+        return false
+    }
     
     //MARK: - BUTTON ACTIONS
     @IBAction func loginToggleTapped(_ sender: Any) {

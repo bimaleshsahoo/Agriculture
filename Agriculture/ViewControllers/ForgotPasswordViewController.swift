@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ForgotPasswordViewController: UIViewController {
+class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var forgotPasswordBoxView: UIView!
     
@@ -40,6 +40,7 @@ class ForgotPasswordViewController: UIViewController {
         super.viewDidLoad()
 
         inputField()
+        hideKeyboardWhenTappedAround()
         forgotPasswordBox()
         questionBox()
         otpBox()
