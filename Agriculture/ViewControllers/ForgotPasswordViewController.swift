@@ -50,7 +50,7 @@ class ForgotPasswordViewController: UIViewController {
         btnSubmit.layer.shadowOffset = CGSize(width: 0,height: 2.0)
         btnSubmit.layer.shadowRadius = 2.0
         btnSubmit.layer.shadowOpacity = 1.0
-        btnSubmit.layer.shadowPath = UIBezierPath(roundedRect:btnSubmit.bounds, cornerRadius:btnSubmit.layer.cornerRadius).cgPath
+        btnSubmit.layer.shouldRasterize = true
         
         btnSendOtp.layer.cornerRadius = 6.0
         btnSendOtp.layer.masksToBounds = false
@@ -58,7 +58,7 @@ class ForgotPasswordViewController: UIViewController {
         btnSendOtp.layer.shadowOffset = CGSize(width: 0,height: 2.0)
         btnSendOtp.layer.shadowRadius = 2.0
         btnSendOtp.layer.shadowOpacity = 1.0
-        btnSendOtp.layer.shadowPath = UIBezierPath(roundedRect:btnSendOtp.bounds, cornerRadius:btnSendOtp.layer.cornerRadius).cgPath
+        btnSendOtp.layer.shouldRasterize = true
         btnSendOtp.titleLabel?.adjustsFontSizeToFitWidth = true
         
         usernamePasswordToggle.layer.cornerRadius = 5.0
@@ -180,7 +180,7 @@ class ForgotPasswordViewController: UIViewController {
     }
     
     @IBAction func submitTapped(_ sender: Any) {
-        
+        self.navigationController?.popViewController(animated: false)
     }
     
     @IBAction func otpToggleTapped(_ sender: Any) {
@@ -191,7 +191,7 @@ class ForgotPasswordViewController: UIViewController {
     @IBAction func quesDropTapped(_ sender: Any) {
         
         if dropDown.isHidden{
-            dropDown.show()
+           let _ = dropDown.show()
         }
         else
         {

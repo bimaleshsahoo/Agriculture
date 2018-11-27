@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R0R-0B-RSY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R0R-0B-RSY">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -298,6 +298,9 @@
                                                 <state key="normal" title="Lets Go!">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="letsGoTapped:" destination="VyN-rI-VPm" eventType="touchUpInside" id="QPC-yI-rp2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -363,7 +366,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GuO-ae-gYK"/>
                     </view>
+                    <navigationItem key="navigationItem" id="yFX-Op-3ya"/>
                     <connections>
+                        <outlet property="btnLetsGo" destination="gDa-sm-4At" id="G9Z-ox-Zsw"/>
                         <outlet property="contentView" destination="9CU-L8-dkq" id="3xp-Mk-3q9"/>
                         <outlet property="passwordView" destination="Jkx-KJ-cv9" id="48k-Ab-cGJ"/>
                         <outlet property="scrollView" destination="qOe-E3-MIV" id="YSE-vj-CwN"/>
@@ -372,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xdc-XI-CVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034.7826086956522" y="848.64130434782612"/>
+            <point key="canvasLocation" x="2994" y="133"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="TGP-iz-hvC">
@@ -945,7 +950,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUy-2M-xe9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034.7826086956522" y="-595.10869565217399"/>
+            <point key="canvasLocation" x="2157" y="-603"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="blB-2X-hjf">
@@ -1097,7 +1102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdc-Pr-Z0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3836.2318840579715" y="132.88043478260872"/>
+            <point key="canvasLocation" x="3822" y="133"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="FbW-BY-JeI">
@@ -1128,7 +1133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYk-kW-x6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5497.1014492753629" y="132.88043478260872"/>
+            <point key="canvasLocation" x="5483" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tw9-gK-Nft">
@@ -1147,7 +1152,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6HI-Ew-HbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4689.8550724637689" y="132.88043478260872"/>
+            <point key="canvasLocation" x="4675" y="133"/>
         </scene>
         <!--New Insurance View Controller-->
         <scene sceneID="Ihm-O3-Qb5">
@@ -1178,7 +1183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohe-Xp-gj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6300.0000000000009" y="132.88043478260872"/>
+            <point key="canvasLocation" x="6286" y="133"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="38n-jg-zyV">
@@ -1209,7 +1214,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJa-dp-oag">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJa-dp-oag">
                                         <rect key="frame" x="141" y="35" width="132" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="kJa-dp-oag" secondAttribute="height" multiplier="22:3" id="Qjv-Ww-96H"/>
@@ -1375,17 +1380,17 @@
                                                 </constraints>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="JLz-L8-hwE">
-                                                <rect key="frame" x="8" y="65.666666666666629" width="32" height="32"/>
+                                                <rect key="frame" x="8" y="66" width="32" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="JLz-L8-hwE" secondAttribute="height" multiplier="1:1" id="8ju-JE-Fxa"/>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="RD1-wM-4e3"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSi-hB-9lH">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ABCD" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSi-hB-9lH">
                                                 <rect key="frame" x="49" y="61.666666666666629" width="301" height="40.333333333333343"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7b-vv-owu">
                                                 <rect key="frame" x="8" y="102" width="342" height="1"/>
@@ -1400,6 +1405,9 @@
                                                 <state key="normal" title="Show Password">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="showPasswordTapped:" destination="mf2-et-vuy" eventType="touchUpInside" id="ehM-23-DLB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -1648,7 +1656,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRF-XA-NPv" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3021.739130434783" y="132.88043478260872"/>
+            <point key="canvasLocation" x="2157" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hKr-6F-OMO">
@@ -1665,7 +1673,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4eB-Mg-er0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2223" y="145"/>
+            <point key="canvasLocation" x="1270" y="133"/>
         </scene>
     </scenes>
     <resources>

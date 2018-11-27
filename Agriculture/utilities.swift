@@ -26,13 +26,13 @@ class utilities {
     static func logoutAlert() {
         guard let viewController = UIApplication.shared.keyWindow?.rootViewController else {
             fatalError("keyWindow has no rootViewController")
-            
         }
+        
         let logoutAlert = UIAlertController(title: "Log Out", message: "Are You Sure to Log Out ? ", preferredStyle: UIAlertController.Style.alert)
         
         logoutAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let loginController = storyBoard.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
+            let loginController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             let appdelegate = UIApplication.shared.delegate as! AppDelegate
             appdelegate.window!.rootViewController = loginController
         }))

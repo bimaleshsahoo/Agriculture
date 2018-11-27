@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var btnDropDown: UIButton!
     
     let dropDown = DropDown()
+    var showPassword = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +44,6 @@ class LoginViewController: UIViewController {
         
         loginToggle.layer.cornerRadius = 5.0
         loginToggle.layer.masksToBounds = true
-
         
         loginButton.layer.cornerRadius = 6.0
         loginButton.layer.masksToBounds = false
@@ -51,18 +51,19 @@ class LoginViewController: UIViewController {
         loginButton.layer.shadowOffset = CGSize(width: 0,height: 2.0)
         loginButton.layer.shadowRadius = 2.0
         loginButton.layer.shadowOpacity = 1.0
-        //loginButton.layer.shadowPath = UIBezierPath(roundedRect:loginButton.bounds, cornerRadius:loginButton.layer.cornerRadius).cgPath
+        loginButton.layer.shouldRasterize = true
+        
         forgotPassBtn.titleLabel?.adjustsFontSizeToFitWidth = true
         forgotPassBtn.contentVerticalAlignment = .top
+        
         sendOtpBtn.layer.cornerRadius = 3.0
         sendOtpBtn.layer.masksToBounds = false
         sendOtpBtn.layer.shadowColor = UIColor.black.cgColor
         sendOtpBtn.layer.shadowOffset = CGSize(width: 0,height: 2.0)
         sendOtpBtn.layer.shadowRadius = 1.0
         sendOtpBtn.layer.shadowOpacity = 1.0
-       // sendOtpBtn.layer.shadowPath = UIBezierPath(roundedRect:sendOtpBtn.bounds, cornerRadius:sendOtpBtn.layer.cornerRadius).cgPath
+        sendOtpBtn.layer.shouldRasterize = true
         sendOtpBtn.titleLabel?.adjustsFontSizeToFitWidth = true
-        
         
         inputText()
         lblDefaultLanguage?.text = "English"
@@ -110,7 +111,7 @@ class LoginViewController: UIViewController {
     @IBAction func btnLanguageDropDown(_ sender: Any) {
     
         if dropDown.isHidden{
-            dropDown.show()
+            let _ = dropDown.show()
         }
         else
         {
@@ -164,6 +165,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
+        
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordViewController") as! ChangePasswordViewController
+        self.navigationController?.pushViewController(viewController, animated: true)
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9647058824, green: 0.5176470588, blue: 0.262745098, alpha: 1)
+        
     }
 
     @IBAction func forgotPasswordTapped(_ sender: Any) {        
@@ -173,5 +179,14 @@ class LoginViewController: UIViewController {
     }
     
     
+    @IBAction func showPasswordTapped(_ sender: Any) {
+    
+        if showPassword == false {
+            passwordTextField.isSecureTextEntry = false
+        } else if showPassword == true {
+            passwordTextField.isSecureTextEntry = true
+        }
+        
+    }
     
 }
