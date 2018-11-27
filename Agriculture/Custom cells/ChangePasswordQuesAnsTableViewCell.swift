@@ -12,6 +12,7 @@ class ChangePasswordQuesAnsTableViewCell: UITableViewCell {
     @IBOutlet weak var lblQues: UILabel!
     @IBOutlet weak var lblAnswer: UITextField!
     @IBOutlet weak var btnQuestion: UIButton!
+    @IBOutlet weak var quesAnsView: UIView!
     
     var dropDown = DropDown()
     var arrQuestions:Array<String>!

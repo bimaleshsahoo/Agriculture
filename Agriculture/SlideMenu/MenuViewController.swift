@@ -47,7 +47,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc func logoutTapped() {
         
-        utilities.logoutAlert()
+        utilities.logoutAlert(controller: self)
     }
     
     //MARK: - Table View Delegates and Datasource

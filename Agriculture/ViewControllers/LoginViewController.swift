@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var btnDropDown: UIButton!
     
     let dropDown = DropDown()
-    var showPassword = false
+    var showPassword = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +67,9 @@ class LoginViewController: UIViewController {
         
         inputText()
         lblDefaultLanguage?.text = "English"
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -166,25 +169,35 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginTapped(_ sender: Any) {
         
-        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordViewController") as! ChangePasswordViewController
-        self.navigationController?.pushViewController(viewController, animated: true)
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9647058824, green: 0.5176470588, blue: 0.262745098, alpha: 1)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle : nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "ChangePasswordViewController") as! ChangePasswordViewController
+        
+        let navigationController = UINavigationController(rootViewController: viewController)
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window!.rootViewController = navigationController
+        navigationController.navigationBar.barTintColor = #colorLiteral(red: 0.9647058824, green: 0.5176470588, blue: 0.262745098, alpha: 1)
         
     }
 
     @IBAction func forgotPasswordTapped(_ sender: Any) {        
-        let taskView = self.storyboard?.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle : nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
         
-        self.navigationController?.pushViewController(taskView, animated: true)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window!.rootViewController = navigationController
+
     }
     
     
     @IBAction func showPasswordTapped(_ sender: Any) {
     
-        if showPassword == false {
+        if showPassword == true {
             passwordTextField.isSecureTextEntry = false
-        } else if showPassword == true {
+            showPassword = false
+        } else {
             passwordTextField.isSecureTextEntry = true
+            showPassword = true
         }
         
     }

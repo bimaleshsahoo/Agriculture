@@ -19,6 +19,8 @@ class ChangePasswordViewController: UIViewController,UITableViewDelegate,UITable
     override func viewDidLoad() {
         super.viewDidLoad()
       
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
         passwordView.layer.cornerRadius = 6.0
         passwordView.layer.masksToBounds = true
         passwordView.layer.borderWidth = 1.0
@@ -51,10 +53,11 @@ class ChangePasswordViewController: UIViewController,UITableViewDelegate,UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuesAnsCell", for: indexPath) as! ChangePasswordQuesAnsTableViewCell
         
-        cell.layer.cornerRadius = 6.0
-        cell.layer.masksToBounds = true
-        cell.layer.borderWidth = 1.0
-        cell.layer.borderColor = UIColor.white.cgColor
+        cell.quesAnsView.layer.cornerRadius = 6.0
+        cell.quesAnsView.layer.masksToBounds = true
+        cell.quesAnsView.layer.borderWidth = 1.0
+        cell.quesAnsView.layer.borderColor = UIColor.white.cgColor
+        
         cell.layer.cornerRadius = cell.frame.size.height * 0.05
         cell.setUpDropDown()
         return cell

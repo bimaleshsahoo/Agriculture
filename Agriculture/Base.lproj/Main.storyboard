@@ -280,6 +280,7 @@
                                                             <outlet property="btnQuestion" destination="5zK-RL-eK5" id="ULf-Fc-3tT"/>
                                                             <outlet property="lblAnswer" destination="4RV-ld-fbm" id="5Tu-jI-NbD"/>
                                                             <outlet property="lblQues" destination="df2-gF-Qf0" id="yKt-XX-ebz"/>
+                                                            <outlet property="quesAnsView" destination="tHr-5c-PbO" id="zgM-ZN-w2T"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
@@ -1371,6 +1372,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_placeholderLabel.adjustsFontSizeToFitWidth" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kl2-n5-gPB">
                                                 <rect key="frame" x="8" y="50.666666666666629" width="342" height="1"/>
@@ -1386,7 +1390,7 @@
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="RD1-wM-4e3"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ABCD" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSi-hB-9lH">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSi-hB-9lH">
                                                 <rect key="frame" x="49" y="61.666666666666629" width="301" height="40.333333333333343"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1452,6 +1456,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="_placeholderLabel.adjustsFontSizeToFitWidth" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="As1-mY-1IP">
                                                 <rect key="frame" x="8" y="50.666666666666629" width="241" height="1"/>

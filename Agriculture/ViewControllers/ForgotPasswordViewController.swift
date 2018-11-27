@@ -66,6 +66,9 @@ class ForgotPasswordViewController: UIViewController {
         
         otpToggle.layer.cornerRadius = 5.0
         otpToggle.layer.masksToBounds = true
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
 
     }
     
@@ -180,7 +183,14 @@ class ForgotPasswordViewController: UIViewController {
     }
     
     @IBAction func submitTapped(_ sender: Any) {
-        self.navigationController?.popViewController(animated: false)
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle : nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        
+        let navigationController = UINavigationController(rootViewController: viewController)
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window!.rootViewController = navigationController
+        
     }
     
     @IBAction func otpToggleTapped(_ sender: Any) {
