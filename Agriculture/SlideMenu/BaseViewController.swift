@@ -64,7 +64,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     }
     
     // Search and Notification
-    func setUpNavBar(){
+    func setUpNavBar(title: String){
         
         let notificationBtn = UIButton(type: .custom)
         notificationBtn.setImage(UIImage(named: "notification"), for: .normal)
@@ -79,6 +79,9 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         let item2 = UIBarButtonItem(customView: searchBtn)
         
         self.navigationItem.setRightBarButtonItems([item1,item2], animated: true)
+        
+        self.navigationItem.title = title
+        
     }
     
     @objc func notify() {

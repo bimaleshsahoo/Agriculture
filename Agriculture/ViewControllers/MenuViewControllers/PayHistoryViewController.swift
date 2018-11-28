@@ -15,7 +15,7 @@ class PayHistoryViewController: BaseViewController {
         //MARK: - SIDE MENU BUTTON
         
         addSlideMenuButton()
-        setUpNavBar()
+        setUpNavBar(title: "Pay History")
         // Do any additional setup after loading the view.
     }
     

@@ -15,7 +15,7 @@ class PayPreviewViewController: BaseViewController {
         //MARK: - SIDE MENU BUTTON
         
         addSlideMenuButton()
-        setUpNavBar()
+        setUpNavBar(title: "Pay Preview")
         // Do any additional setup after loading the view.
     }
     

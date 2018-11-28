@@ -15,7 +15,7 @@ class CoinsurrentPaymentViewController: BaseViewController {
         //MARK: - SIDE MENU BUTTON
         
         addSlideMenuButton()
-        setUpNavBar()
+        setUpNavBar(title: "Coinsurrent Payment")
         // Do any additional setup after loading the view.
     }
     

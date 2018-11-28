@@ -1,9 +1,9 @@
 //
 //  ExpandableTableView.swift
-//  ExpandableCell
+//  Agriculture
 //
-//  Created by YiSeungyoun on 2017. 8. 6..
-//  Copyright © 2017년 SeungyounYi. All rights reserved.
+//  Created by Bimalesh Sahoo on 25/11/18.
+//  Copyright © 2018 Bimalesh Sahoo. All rights reserved.
 //
 
 import UIKit

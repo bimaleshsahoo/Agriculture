@@ -100,6 +100,7 @@ class MenuViewController: UIViewController {
 
 extension MenuViewController: ExpandableDelegate {
     
+    //MARK: - Declaration of only Expandable Cells
     func expandableTableView(_ expandableTableView: ExpandableTableView, expandedCellsForRowAt indexPath: IndexPath) -> [UITableViewCell]? {
         switch indexPath.row {
         case 2:
@@ -216,6 +217,7 @@ extension MenuViewController: ExpandableDelegate {
         }
     }
     
+    //MARK: - Display Cells at indexPath
     func expandableTableView(_ expandableTableView: ExpandableTableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = expandableTableView.dequeueReusableCell(withIdentifier: parentCells[indexPath.section][indexPath.row]) else { return UITableViewCell() }

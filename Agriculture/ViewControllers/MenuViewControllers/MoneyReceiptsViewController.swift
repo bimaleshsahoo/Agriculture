@@ -15,7 +15,7 @@ class MoneyReceiptsViewController: BaseViewController {
         //MARK: - SIDE MENU BUTTON
         
         addSlideMenuButton()
-        setUpNavBar()
+        setUpNavBar(title: "Money Receipts")
         // Do any additional setup after loading the view.
     }
     

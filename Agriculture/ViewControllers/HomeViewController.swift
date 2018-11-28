@@ -16,7 +16,7 @@ class HomeViewController: BaseViewController {
     //MARK: - SIDE MENU BUTTON
         
         addSlideMenuButton()
-        setUpNavBar()
+        setUpNavBar(title: "Home")
         // Do any additional setup after loading the view.
     }
 

@@ -16,7 +16,7 @@ class NewInsuranceViewController: BaseViewController {
     //MARK: - SIDE MENU BUTTON
         
         addSlideMenuButton()
-        setUpNavBar()
+        setUpNavBar(title: "New Insurance")
         
         // Do any additional setup after loading the view.
     }

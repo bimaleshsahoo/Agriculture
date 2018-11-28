@@ -15,7 +15,7 @@ class DisbursalsViewController: BaseViewController {
         //MARK: - SIDE MENU BUTTON
         
         addSlideMenuButton()
-        setUpNavBar()
+        setUpNavBar(title: "Disbursals")
         // Do any additional setup after loading the view.
     }
     

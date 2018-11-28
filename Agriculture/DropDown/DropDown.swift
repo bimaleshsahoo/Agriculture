@@ -2,9 +2,10 @@
 //  DropDown.swift
 //  Agriculture
 //
-//  Created by Vaibhav Malhotra on 21/11/18.
-//  Copyright © 2018 Vaibhav Malhotra. All rights reserved.
+//  Created by Bimalesh Sahoo on 21/11/18.
+//  Copyright © 2018 Bimalesh Sahoo. All rights reserved.
 //
+
 
 
 import UIKit

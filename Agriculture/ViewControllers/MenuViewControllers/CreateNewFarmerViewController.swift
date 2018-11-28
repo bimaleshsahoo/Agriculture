@@ -15,7 +15,7 @@ class CreateNewFarmerViewController: BaseViewController {
         //MARK: - SIDE MENU BUTTON
         
         addSlideMenuButton()
-        setUpNavBar()
+        setUpNavBar(title: "Create New Farmer")
         // Do any additional setup after loading the view.
     }
     
