@@ -143,8 +143,10 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         let menuVC : MenuViewController = self.storyboard!.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
         menuVC.btnMenu = sender
         menuVC.delegate = self
-        self.view.addSubview(menuVC.view)
-        self.addChild(menuVC)
+        
+        let currentWindow = UIApplication.shared.keyWindow
+        currentWindow?.addSubview(menuVC.view)
+        //self.addChild(menuVC)
         menuVC.view.layoutIfNeeded()
         
         
