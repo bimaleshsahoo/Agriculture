@@ -10,6 +10,8 @@ import UIKit
 
 class BaseViewController: UIViewController, SlideMenuDelegate {
     
+    let currentWindow = UIApplication.shared.keyWindow
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -115,27 +117,27 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     }
     
     @objc func onSlideMenuButtonPressed(_ sender : UIButton){
-        if (sender.tag == 10)
-        {
-            // To Hide Menu If it already there
-            self.slideMenuItemSelectedAtIndex(-1);
-            
-            sender.tag = 0;
-            
-            let viewMenuBack : UIView = view.subviews.last!
-            
-            UIView.animate(withDuration: 0.3, animations: { () -> Void in
-                var frameMenu : CGRect = viewMenuBack.frame
-                frameMenu.origin.x = -1 * UIScreen.main.bounds.size.width
-                viewMenuBack.frame = frameMenu
-                viewMenuBack.layoutIfNeeded()
-                viewMenuBack.backgroundColor = UIColor.clear
-            }, completion: { (finished) -> Void in
-                viewMenuBack.removeFromSuperview()
-            })
-            
-            return
-        }
+//        if (sender.tag == 10)
+//        {
+//            // To Hide Menu If it already there
+//            self.slideMenuItemSelectedAtIndex(-1);
+//            
+//            sender.tag = 0;
+//            
+//            let viewMenuBack : UIView = view.subviews.last!
+//            
+//            UIView.animate(withDuration: 0.3, animations: { () -> Void in
+//                var frameMenu : CGRect = viewMenuBack.frame
+//                frameMenu.origin.x = -1 * UIScreen.main.bounds.size.width
+//                viewMenuBack.frame = frameMenu
+//                viewMenuBack.layoutIfNeeded()
+//                viewMenuBack.backgroundColor = UIColor.clear
+//            }, completion: { (finished) -> Void in
+//                viewMenuBack.removeFromSuperview()
+//            })
+//            
+//            return
+//        }
         
         sender.isEnabled = false
         sender.tag = 10
@@ -143,10 +145,13 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         let menuVC : MenuViewController = self.storyboard!.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
         menuVC.btnMenu = sender
         menuVC.delegate = self
+        menuVC.view.tag = 11
         
-        let currentWindow = UIApplication.shared.keyWindow
         currentWindow?.addSubview(menuVC.view)
-        //self.addChild(menuVC)
+        
+        navigationControllerObj = self.navigationController
+//        self.view.addSubview(menuVC.view)
+//        self.addChild(menuVC)
         menuVC.view.layoutIfNeeded()
         
         

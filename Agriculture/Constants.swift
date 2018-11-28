@@ -15,6 +15,9 @@ var menuItems : [String] = ["Home", "New Insurance", "Existing Insurance", "Clai
 
 var arrQuestions = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit?","Aliquam mollis tortor a tempor congue?","Nam eget metus non leo faucibus commodo vel ac diam?","Vestibulum nec sem eget arcu molestie consectetur in id ante?","In in orci finibus, ultricies enim ut, accumsan sem?"]
 
+// Saving navigation controller obj before presenting Menu controller
+var navigationControllerObj : UINavigationController!
+
 //MARK: dismiss keyboard on background tap
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {

@@ -69,7 +69,16 @@ class MenuViewController: UIViewController {
     }
     
     @objc func logoutTapped() {
-        
+        let viewMenuBack : UIView = (UIApplication.shared.keyWindow!.viewWithTag(11))!
+        UIView.animate(withDuration: 0.3, animations: { () -> Void in
+            var frameMenu : CGRect = viewMenuBack.frame
+            frameMenu.origin.x = -1 * UIScreen.main.bounds.size.width
+            viewMenuBack.frame = frameMenu
+            viewMenuBack.layoutIfNeeded()
+            viewMenuBack.backgroundColor = UIColor.clear
+        }, completion: { (finished) -> Void in
+            viewMenuBack.removeFromSuperview()
+        })
         utilities.logoutAlert(controller: self)
     }
     
@@ -154,18 +163,19 @@ extension MenuViewController: ExpandableDelegate {
     
     func expandableTableView(_ expandableTableView: ExpandableTableView, didSelectRowAt indexPath: IndexPath) {
         print("didSelectRow:\(indexPath)")
+        let viewMenuBack : UIView = (UIApplication.shared.keyWindow!.viewWithTag(11))!
+        
         //MARK: - Navigation for Normal Cells as per indexPath
         if indexPath == [0,0] {
             
             let view = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             
-            self.navigationController?.pushViewController(view, animated: true)
+            dismissMenu(viewController: view)
             
         } else if indexPath == [0,1] {
             
             let view = self.storyboard?.instantiateViewController(withIdentifier: "NewInsuranceViewController") as! NewInsuranceViewController
-            
-            self.navigationController?.pushViewController(view, animated: true)
+            dismissMenu(viewController: view)
             
         }
     }
@@ -176,37 +186,37 @@ extension MenuViewController: ExpandableDelegate {
             
             let view = self.storyboard?.instantiateViewController(withIdentifier: "MoneyReceiptsViewController") as! MoneyReceiptsViewController
 
-            self.navigationController?.pushViewController(view, animated: true)
+            dismissMenu(viewController: view)
             
         } else if indexPath == [0,4] {
             
             let view = self.storyboard?.instantiateViewController(withIdentifier: "PayPreviewViewController") as! PayPreviewViewController
             
-            self.navigationController?.pushViewController(view, animated: true)
+            dismissMenu(viewController: view)
             
         }  else if indexPath == [0,5] {
             
             let view = self.storyboard?.instantiateViewController(withIdentifier: "CreateNewFarmerViewController") as! CreateNewFarmerViewController
             
-            self.navigationController?.pushViewController(view, animated: true)
+            dismissMenu(viewController: view)
             
         }  else if indexPath == [0,6] {
             
             let view = self.storyboard?.instantiateViewController(withIdentifier: "PayHistoryViewController") as! PayHistoryViewController
             
-            self.navigationController?.pushViewController(view, animated: true)
+            dismissMenu(viewController: view)
             
         }  else if indexPath == [0,7] {
             
             let view = self.storyboard?.instantiateViewController(withIdentifier: "CoinsurrentPaymentViewController") as! CoinsurrentPaymentViewController
             
-            self.navigationController?.pushViewController(view, animated: true)
+            dismissMenu(viewController: view)
             
         }  else if indexPath == [0,8] {
             
             let view = self.storyboard?.instantiateViewController(withIdentifier: "DisbursalsViewController") as! DisbursalsViewController
             
-            self.navigationController?.pushViewController(view, animated: true)
+            dismissMenu(viewController: view)
             
         }
     }
@@ -289,6 +299,21 @@ extension MenuViewController: ExpandableDelegate {
     
     func expandableTableView(_ expandableTableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return true
+    }
+    
+    func dismissMenu(viewController:UIViewController) {
+        let viewMenuBack : UIView = (UIApplication.shared.keyWindow!.viewWithTag(11))!
+        UIView.animate(withDuration: 0.3, animations: { () -> Void in
+                            var frameMenu : CGRect = viewMenuBack.frame
+                            frameMenu.origin.x = -1 * UIScreen.main.bounds.size.width
+                            viewMenuBack.frame = frameMenu
+                            viewMenuBack.layoutIfNeeded()
+                            viewMenuBack.backgroundColor = UIColor.clear
+                        }, completion: { (finished) -> Void in
+                            viewMenuBack.removeFromSuperview()
+                        })
+        
+        navigationControllerObj.pushViewController(viewController, animated: true)
     }
 }
 
